@@ -179,8 +179,8 @@ int main() {
     break;
     }
    
-    // Menu escolha do segundo atributo:
-
+    // Escolhendo o segundo atributo
+  
     printf("\n=== MENU DE ATRIBUTOS ===\n");
     printf("1 - População\n");
     printf("2 - Área\n");
@@ -188,17 +188,15 @@ int main() {
     printf("4 - Pontos Turísticos\n");
     printf("5 - Densidade Populacional (vence o MENOR)\n");
     printf("6 - PIB per Capita\n");
+    printf("\nEscolha o segundo atributo diferente do primeiro: ");
+    scanf("%d", &escolha02);
 
-    printf ("\nEscolha o segundo atributo, que seja diferente do primeiro: ");
-    Scanf ("%d", &escolha02);
-
-    if (escolha01 == escolha02){
+    if (escolha01 == escolha02) {
         printf ("Você escolheu o mesmo atributo!");
-    } else { 
+    } else {
         switch (escolha02)
-    {
-        // População:
-    case 1: 
+        {
+        case 1: 
     if (populacao01 > populacao02){
         printf ("Cidade 1 tem maior população.\n");
         pontos1++;
@@ -273,20 +271,20 @@ int main() {
     } else {
         printf ("Empate em PIB per capita!\n");
     }
-    break;
-
-    default:
-    printf (" Opção inválida!\n");
-    break;
+        break;
+        
+      default:
+        printf (" Opção inválida!\n");
+        break;
+        }
     }
-    }
 
-  
+
     // Exibição dos Resultados:
 
     printf (" \n### Placar final ###\n");
     printf ("%s : %d pontos\n", cidade01, pontos1);
-    printf ("%s : %d pontos\n", cidade02, pontos2);
+    printf ("%s : %d pontos\n", cidade02, pontos2);PR
 
     if (pontos1 > pontos2) {
         printf (" \nA carta vencedora foi da cidade: %s\n", cidade01);
